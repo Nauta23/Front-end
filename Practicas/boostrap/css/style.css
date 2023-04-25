@@ -1,0 +1,27 @@
+img {
+    width: 100%;
+}
+
+.bg-light {
+    color: black;
+}
+
+dd {
+    margin-bottom: 4rem;
+}
+
+.list-group-horizontal {
+    margin-bottom: 1rem;
+}
+
+.dropdowns {
+    display: flex;
+}
+
+.dropdown {
+    margin-right: 1rem;
+}
+
+.forms {
+    padding: 4rem;
+}

@@ -1,0 +1,18 @@
+* {
+    margin-left: 0.4em;
+}
+
+form {
+    margin-bottom: 4em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid grey;
+}
+
+.form__span {
+    background-color: gold;
+}
+
+button {
+    display: block;
+    margin-bottom: 1em;
+}

@@ -1,0 +1,135 @@
+/* Observaciones:
+flex-wrap: wrap; no funcionara si el tamanno declarado del contenedor no excede al tamanno total declarado de los hijos.
+*/
+:root {
+    --header__container--witdh: 49em;
+    --header__container--height: calc(var(--header__container--witdh)/1.61);
+    --header__img--witdh: 17em;
+
+}
+
+/* * {
+    overflow: hidden;
+} */
+
+/* .borde {
+    outline: 0.1em solid gray;
+} */
+
+body {
+    background-color: #f2f2f2;
+}
+
+/* body>* {
+    margin-right: auto;
+    margin-left: auto;
+} */
+
+.header {
+    display: flex;
+    justify-content: center;
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 4em;
+}
+
+.header__container {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: var(--header__container--witdh);
+    /* height: var(--header__container--height); */
+
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+@media only screen and (min-width:37.51em) {
+
+    .header__container {
+        border: 0.14em solid gray;
+        box-shadow: 0 0 1em;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 37.5em) {
+
+    .header__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+.header__img {
+    width: var(--header__img--witdh);
+
+    border: 0.2em solid grey;
+    clip-path: circle(90px at center);
+}
+
+.header__description {
+    flex-grow: 1;
+
+    width: 19em;
+    padding: 0 1em;
+}
+
+.header__name {
+    text-align: center;
+}
+
+.header__table {
+    height: 8em;
+    margin-top: 1.4em;
+}
+
+.header__icons {
+    max-width: 6em;
+    max-height: 6em;
+}
+
+.icon__bootstrap {
+    max-width: 5.7em;
+    max-height: 5em;
+}
+
+.main {
+    margin-bottom: 4em;
+}
+
+.main__title {
+    text-align: center;
+}
+
+.main__articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main__article {
+    width: calc(var(--header__container--witdh)/3);
+
+    border: 0.1em solid gray;
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.article__img {
+    height: calc(var(--header__container--witdh)/3/1.61);
+
+    text-align: center;
+
+    background-color: aquamarine;
+}
+
+.article__description {
+    margin-left: 0.4em;
+}
+
+.article__title {
+    text-align: center;
+}

@@ -1,0 +1,127 @@
+.con {
+    width: 50%;
+    height: 100px;
+    outline: 1px solid red;
+
+
+    /*Para activar flexbox.*/
+    display: flex;
+
+
+    /*El eje principal por el cual se distribuyen los elementos.*/
+
+    flex-direction: row;
+    /*En fila.*/
+    /*Por defecto.*/
+
+    flex-direction: column;
+    /*En columnas.*/
+
+
+    /*Invertir el orden de psoicionamiento.*/
+
+    flex-direction: row-reverse;
+    /*De derecha a izquierda.*/
+
+    flex-direction: column-reverse;
+    /*De abajo hacia arriba.*/
+
+
+    flex-wrap: nowrap;
+    /*No hace nada.*/
+    /*Por defecto.*/
+
+    flex-wrap: wrap;
+    /*Si un elemento no cabe en el eje principal, pasa al eje transversal.*/
+
+    flex-wrap: wrap-reverse;
+    /*Lo mismo pero en orden inverso.*/
+
+
+    /*Cambia la alineacion de elementos en el eje principal.*/
+
+    justify-content: flex-start;
+    /*Agrupa a los elementos al principio.*/
+    /*Por defecto.*/
+
+    justify-content: flex-end;
+    /*Al final.*/
+
+    justify-content: center;
+    /*Al centro.*/
+
+    justify-content: space-between;
+    /*El mismo espacio entre elementos. El primer elemento al inicio y el ultimo al final.*/
+
+    justify-content: space-around;
+    /*Da el mismo espacio alrededor de cada elemento.*/
+
+    justify-content: space-evenly;
+    /* Los espacios al lado de cada elemento son iguales.*/
+
+
+    /*Alineacion en el eje transversal.*/
+
+    align-items: stretch;
+    /*Estira los elementos por todo el eje transversal.*/
+
+    align-items: flex-start;
+    /*Al inicio.*/
+
+    align-items: flex-end;
+    /*Al final.*/
+
+    align-items: center;
+    /*Centrar.*/
+
+    align-items: baseline;
+    /*En base a la linea inferior del texto.*/
+
+
+    /*Es como justify-content pero en el eje transversal, cuando se desborda elementos en el eje principal.*/
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-between;
+    align-content: space-around;
+}
+
+
+/*Estilos a los elementos*/
+
+b {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+
+
+    order: 0;
+    /*Cambia el orden de un elemento.
+    Mientras mas grande, mas posterior queda el elemento.*/
+    /*Por defecto.*/
+
+    flex-grow: 0;
+    /*Al elemento se le adicionaran tantos cocientes de (el espacio sobrante en el eje principal/el numero de elementos) como su valor le indique.*/
+    /*Por defecto.*/
+
+
+    /*Como se ajusta el tamanno de un elemento.*/
+
+    flex-shrink: 0;
+    /*El elemento no se reduira para ajustarse al ancho en el contenedor.*/
+
+    flex-shrink: 1;
+    /*Lo ontrario que con el valor 0.*/
+    /*Por defeto.*/
+
+    flex-shrink: 3;
+    /*El elemento sera tres veces mas pequenno que con el valor por defecto.*/
+
+
+    flex-basis: (X)px;
+    /*Modifica que tanto se extiende un elemento en el eje prinipal.*/
+
+    align-self: flex-start;
+    /*Alinea un elemento respecto al eje transversal. */
+
+}

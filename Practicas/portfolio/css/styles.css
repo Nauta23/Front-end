@@ -1,0 +1,36 @@
+.borde {
+    outline: 2px solid red;
+}
+
+.borderazo {
+    outline: 4px blue;
+}
+
+.navbar {
+    height: 200px;
+
+    /* display: flex;
+    align-items: flex-start; */
+
+}
+
+
+.navbar-collapse {
+    /* align-self: flex-start; */
+    display: flex;
+}
+
+.lorem {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+    height: 300px;
+    align-items: center;
+
+}
+
+.ipsum {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+}

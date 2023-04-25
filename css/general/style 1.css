@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+}
+
+[href^=color] {
+    background-color: rgb(201, 15, 25);
+    /* selecciona por el comienzo del valor */
+}
+
+
+[href*=azul] {
+    background-color: yellow;
+    /* Que contenga el valor */
+}
+
+
+[href$=rosa] {
+    background-color: blueviolet;
+    /* Que termine en el valor */
+}
+
+
+[lang|="es"] {
+    background-color: lawngreen;
+}
+
+.class-1,
+.class-2,
+.class-3 {
+    background-color: aquamarine;
+    /* Dar un mismo estilo a varios elementos*/
+}
+
+
+.class-3 span {
+    background-color: blueviolet;
+}
+
+p+.class-2 {
+    color: brown;
+}
+
+.class-3>span {
+    background-color: crimson;
+    /*Todos los hijos directos*/
+}
+
+
+.class-4 {
+    background-color: darkcyan;
+}
+
+.class-4 span {
+    background-color: green;
+}
+
+.class-4 span {
+    background-color: inherit;
+}
+
+.class-5 {
+    background-color: darkmagenta;
+}
+
+.list {
+    color: darkslateblue;
+}
+
+.list-iten-extra {
+    color: initial;
+}
+
+/*nornalize*/
+
+body {
+    background-color: #333;
+}
+
+.block {
+    background-color: purple;
+    width: 400px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    /*Solo funciona el valor auto si tiene una dimension declarada en los bloques*/
+    padding-left: auto;
+    padding-right: auto;
+    /*La distancia entre el contenido y el borde. Aumenta el tamanno de la caja. */
+    text-align: center;
+}
+
+/* width & height son solo para bloque. */
+.inline {
+    background-color: lightcoral;
+    color: inherit;
+    margin: 0px 24px;
+    /*Los elementos de linea no cogen margin-top ni margin-bottom */
+}
+
+.buttons {
+    background-color: blue;
+    margin-bottom: 100px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.button {
+    margin-left: 400px;
+    padding: 20px;
+}
+
+.box-1 {
+    width: 300px;
+    height: 300px;
+    background-color: crimson;
+    border-radius: 40px;
+    padding-left: 70px;
+    margin-left: 40px;
+    /*Bordes con circulos*/
+}
+
+.box-2 {
+    width: 300px;
+    height: 300px;
+    background-color: crimson;
+    border-radius: 40px / 80px;
+    padding-left: 70px;
+    margin-left: 40px;
+    margin-top: 40px;
+    /*Bordes con elipses*/
+}
+
+.text {
+    width: 400px;
+    height: 400px;
+    /*overflow solo debe de usarse cuando el contenido desborda a su contenedor*/
+    margin-left: 200px;
+    overflow: visible;
+    /*Por defecto*/
+    overflow: hidden;
+    /*El contenido no se vera. Si se aplica en un eje en el otro se pondra scroll.*/
+    overflow: scroll;
+    /*Apraceran barras de scroll en el eje asignado.*/
+    overflow: auto;
+    /*Aparecera scrolls de ser necesario.*/
+}
+
+/*Usar preferentemente {margin-bottom:;} en vez de {margin-top:;}*/
+
+.link {
+    display: inline-block;
+    /*Para que un elemento de linea adquiera caracteristicas de bloque*/
+}
+
+.block {
+    outline: 40px solid lightslategrey;
+    /*Dibuja un borde por fuera del modelo de caja*/
+    outline-offset: 10px;
+    /*Separa el outline respecto a la caja que pertenece*/
+}
+
+.title {
+    text-align: center;
+
+}
+
+.box-1 {
+    box-shadow: 10px 10px 20px 4px coral;
+}
+
+/*Para dar sombras*/
+
+.box-2 {
+    box-shadow: inset 10px 10px 20px 4px;
+}
+
+/*Jerarquia de propiedades
+    Positions
+    Box model
+    text
+    visual
+    otros
+*/
+
+.box-meta-container {
+    overflow: auto;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 100px;
+    margin-left: 10px;
+    outline: 4px solid red;
+}
+
+/*Para que no muestre scroll usar witdh:auto; en el hijo.*/
+
+.box-container {
+    width: auto;
+    height: 240px;
+    margin-left: 50px;
+    background-color: aqua;
+}
+
+.box-3 {
+    width: auto;
+    /*auto*/
+    height: 24%;
+    margin: 50px;
+    background-color: blanchedalmond;
+    /*Para que no se deborde utilizar witdh:auto;*/
+}
+
+/*heigth:x%; solo funciona si el contenedor tiene un alto declarado. Si el elemento tiene absolute el porcentaje de heigth es con respecto al viewport.*/
+
+/*100vw toma en cuenta el ancho de la barra de scroll, por tanto, puede salir mas ancho de lo esperado y salir un scroll horizontal indeseado. Utilizar width: 100%; en un elemento hijo del body o el html, puede ser util. */
+
+.box-7 {
+    background-color: rgba(0, 0, 244, 0.7);
+    width: 200px;
+    height: 200px;
+    box-shadow: 7px 7px 7px 7px #ff0000;
+    position: relative;
+    bottom: 19px;
+    /*rgba(red, green, blue, alpha)*/
+    /*hexadecimal*/
+}
+
+[class^=title] {
+    font-family: 'Prata', serif;
+}
